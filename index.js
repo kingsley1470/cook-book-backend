@@ -16,14 +16,16 @@ const path = require('path');
 //     })
 //     .catch(err=>console.log(err))
 // })
-const filePath = path.join(process.cwd(), "receipes.txt")
+const filePath = path.join(process.cwd(), "receipes.json")
 
 app.get('/receipes', (req, res) => {
+  console.log('receipes')
   fileSystem.readFile(filePath, (err, data) => {
     if (err) {
       console.log(err)
     } else {
-      res.send(data.toString())
+      console.log(data)
+      res.send(data)
     }
   })});
 
