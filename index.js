@@ -4,6 +4,8 @@ const fileSystem = require('fs');
 const port = 3030;
 const axios = require('axios');
 const path = require('path');
+const recipes = require('./receipes.json')
+let bodyParser = require('body-parser')
 // app.get('/receipslist', (req, res) =>{
 //     axios.get('http://jsonplaceholder.typicode.com/posts/1')
 //     .then(response =>{
@@ -16,36 +18,65 @@ const path = require('path');
 //     })
 //     .catch(err=>console.log(err))
 // })
+
+
 const filePath = path.join(process.cwd(), "receipes.json")
 
 app.get('/receipes', (req, res) => {
-  console.log('receipes')
   fileSystem.readFile(filePath, (err, data) => {
     if (err) {
       console.log(err)
     } else {
-      console.log(data)
-      res.send(data)
-    }
-  })});
+      let sampleData = JSON.parse(data);
+      console.log("recipes from json file", sampleData["receipes"])
+      res.send(sampleData["receipes"])
 
-fileSystem.writeFile('receipes.txt', 'This is the first receipe', (err) =>{
-  if(err) {
+    }
+  })
+});
+
+app.get('/receipes/:id', (req, res) => {
+  let id = req.params.id;
+  console.log("id is ", id)
+  let recipe;
+  fileSystem.readFile(filePath, (err, data) => {
+    if (err) {
+      console.log(err)
+    } else {
+      let sampleData = JSON.parse(data);
+      let array = sampleData["receipes"];
+
+      array.map(element => {
+        console.log("element id ", element.recipeId)
+        if (element.recipeId === id) {
+          recipe = element;
+          console.log("inside map");
+        }
+      })
+      console.log("requested recipes ", recipe)
+      res.send(recipe)
+
+    }
+  })
+});
+
+fileSystem.writeFile('receipes.txt', 'This is the first receipe', (err) => {
+  if (err) {
     console.log(err)
-  } else{
+  } else {
     console.log("Done")
   }
 })
 
-fileSystem.readFile(filePath, (err, data) => {
-  if (err) {
-    console.log(err)
-  } else {
-    console.log(data.toString())
-  }
-})
+// fileSystem.readFile(filePath, (err, data) => {
+//   if (err) {
+//     console.log(err)
+//   } else {
+//     console.log(data)
+//   }
+// })
 
-app.listen(port,()=>{
+app.listen(port, () => {
   console.log(`Server running http://localhost:${port}/`);
 });
 
