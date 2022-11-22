@@ -2,13 +2,15 @@ const { Client } = require('pg');
 const express = require('express');
 const app = express();
 
-const client = new Client({
+const client = new Client(
+    {
     host: "localhost",
     user: "Nizami",
     port: 5432,
     password: "1111",
     database: "CookBook"
-    });
+    }
+    );
 
 client.connect();
 
