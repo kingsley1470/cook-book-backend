@@ -1,3 +1,19 @@
 {
-    "receipes": "This is the first receipe"
+  "receipes": [
+    {
+      "name": "Tasty salad pairs salmon and avocado on a bed of rice noodles",
+      "featuredImageURL": "//images.ctfassets.net/2l2wr353mlnb/6E3ZllPeKr8i6MJuMKAp6F/f627b66f932887686e7b3223768c5f69/This_simple__tasty_salad.png",
+      "description": "INGREDIENTS\n\n3 titanium-strength gelatine leaves\n\n11/2 cups (375ml) peach schnapps\n\n185g caster sugar\n\n300g shortbread biscuits, crushed\n\n6 egg yolks\n\n600ml thickened cream\n\n500g mascarpone\n\n1 tsp vanilla extract\n\n250g white chocolate, melted, cooled\n\n8 peaches, stones removed, sliced\n\nFreeze-dried raspberries and edible flowers (optional), to serve\n\nPEACH & VANILLA SYRUP\n\n1/2 cup (110g) caster sugar\n\n\n\nMETHOD\n\n1.To make peach jelly, soak gelatine in a bowl of cold water for 5 minutes to soften. Meanwhile, place \n\nschnapps, 1/3 cup (75g) sugar and 11/2 cups (375ml) water in a saucepan over medium heat and stir until \n\nsugar dissolves. Squeeze excess water from gelatine and add to schnapps, stirring until melted and combined. \n\nRemove from heat and cool to room temperature, then pour into a 3L (12-cup) trifle dish. Chill for 3 hours or until set. Scatter crushed shortbread "
+    },
+    {
+      "name": "Herb omelette protein-rich brunch or breakfast ",
+      "featuredImageURL": "//images.ctfassets.net/2l2wr353mlnb/1fgMkIAJxV3x4qOkJMd3yy/05103f35d9f999ef5ed2340a2c6d05a1/omelette.png",
+      "description": "INGREDIENTS \n\n\n1 tsp olive oil\n\n3 tomatoes, halved\n\n4 large eggs\n\n1 tbsp chopped parsley\n\n1 tbsp chopped basil\n\nMETHOD \n\nSTEP 1\n\nHeat the oil in a small non-stick frying pan, then cook the tomatoes cut-side down until starting to soften and colour. Meanwhile, beat the eggs with the herbs and plenty of freshly ground black pepper in a small bowl.\n\nSTEP 2\n\nScoop the tomatoes from the pan and put them on two serving plates. Pour the egg mixture into the pan and stir gently with a wooden spoon so the egg that sets on the base of the pan moves to enable uncooked egg to flow into the space. Stop stirring when it’s nearly cooked to allow it to set into an omelette. Cut into four and serve with the tomatoes."
+    },
+    {
+      "name": "Chocolate and fresh peaches",
+      "featuredImageURL": "//images.ctfassets.net/2l2wr353mlnb/5iip16qEmWlSjofZgAtUaK/425000ffbf9d52b4ba6889965c95f864/White_chocolate_and_peach_trifle.png",
+      "description": "INGREDIENTS\n\n3 titanium-strength gelatine leaves\n\n11/2 cups (375ml) peach schnapps\n\n185g caster sugar\n\n300g shortbread biscuits, crushed\n\n6 egg yolks\n\n600ml thickened cream\n\n500g mascarpone\n\n1 tsp vanilla extract\n\n250g white chocolate, melted, cooled\n\n8 peaches, stones removed, sliced\n\nFreeze-dried raspberries and edible flowers (optional), to serve\n\nPEACH & VANILLA SYRUP\n\n1/2 cup (110g) caster sugar\n\n\n\nMETHOD\n\n1.To make peach jelly, soak gelatine in a bowl of cold water for 5 minutes to soften. Meanwhile, place \n\nschnapps, 1/3 cup (75g) sugar and 11/2 cups (375ml) water in a saucepan over medium heat and stir until \n\nsugar dissolves. Squeeze excess water from gelatine and add to schnapps, stirring until melted and combined. \n\nRemove from heat and cool to room temperature, then pour into a 3L (12-cup) trifle dish. Chill for 3 hours or until set. Scatter crushed shortbread "
+    }
+  ]
 }
