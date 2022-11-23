@@ -6,6 +6,7 @@ const axios = require('axios');
 const path = require('path');
 const recipes = require('./receipes.json')
 let bodyParser = require('body-parser')
+const data = require("./receipes.json")
 // app.get('/receipslist', (req, res) =>{
 //     axios.get('http://jsonplaceholder.typicode.com/posts/1')
 //     .then(response =>{
@@ -23,7 +24,7 @@ let bodyParser = require('body-parser')
 const filePath = path.join(process.cwd(), "receipes.json")
 
 app.get('/receipes', (req, res) => {
-  fileSystem.readFile(filePath, (err, data) => {
+  fileSystem.readFile(filePath,"utf8" ,(err, data) => {
     if (err) {
       console.log(err)
     } else {
@@ -35,27 +36,30 @@ app.get('/receipes', (req, res) => {
   })
 });
 
-app.get('/receipes/:id', (req, res) => {
+app.get('/receipes/:id',async (req, res) => {
   let id = req.params.id;
   console.log("id is ", id)
-  let recipe;
+  let recipe;   
+
+  //    --- usig filter method 
+  //  let recipeList=data["receipes"];
+  //  recipe = recipeList.filter(recipe => recipe.recipeId.toString() === id );
+ 
+  
   fileSystem.readFile(filePath, (err, data) => {
     if (err) {
       console.log(err)
     } else {
       let sampleData = JSON.parse(data);
       let array = sampleData["receipes"];
-
+      
       array.map(element => {
         console.log("element id ", element.recipeId)
-        if (element.recipeId === id) {
+        if (element.recipeId.toString() === id) {
           recipe = element;
-          console.log("inside map");
         }
       })
-      console.log("requested recipes ", recipe)
-      res.send(recipe)
-
+      res.send(recipe);
     }
   })
 });
@@ -67,14 +71,6 @@ fileSystem.writeFile('receipes.txt', 'This is the first receipe', (err) => {
     console.log("Done")
   }
 })
-
-// fileSystem.readFile(filePath, (err, data) => {
-//   if (err) {
-//     console.log(err)
-//   } else {
-//     console.log(data)
-//   }
-// })
 
 app.listen(port, () => {
   console.log(`Server running http://localhost:${port}/`);
