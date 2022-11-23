@@ -4,6 +4,7 @@ const fileSystem = require('fs');
 const port = 3030;
 const axios = require('axios');
 const path = require('path');
+
 const recipes = require('./receipes.json')
 let bodyParser = require('body-parser')
 const data = require("./receipes.json")
@@ -19,6 +20,7 @@ const data = require("./receipes.json")
 //     })
 //     .catch(err=>console.log(err))
 // })
+
 
 
 const filePath = path.join(process.cwd(), "receipes.json")
@@ -75,11 +77,3 @@ fileSystem.writeFile('receipes.txt', 'This is the first receipe', (err) => {
 app.listen(port, () => {
   console.log(`Server running http://localhost:${port}/`);
 });
-
-// https://axios-http.com/docs/intro
-
-// https://www.geeksforgeeks.org/node-js-fs-writefile-method/
-
-// https://medium.com/geekculture/nodejs-express-axios-and-the-basic-set-up-fe88a0b75dca
-
-// https://stackoverflow.com/questions/61045897/write-a-file-based-on-axios-response
